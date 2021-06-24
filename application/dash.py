@@ -711,7 +711,7 @@ body = html.Div([
                     "de vital importancia en la vida política. "
                     "La metodología que hemos empleado para analizar los datos la detallamos enseguida. "
                     "Como se indica en cada caso, la información sobre el delito tráfico de menores "
-                    "Ejecutivo Nacional del Sistema Nacional de Seguridad Pública (SENSNSP) (2015-2021); "
+                    "fue obtenida del Secretariado Ejecutivo Nacional del Sistema Nacional de Seguridad Pública (SENSNSP) (2015-2021); "
                     " "
                     "Este dashboard seguramente será completado progresivamente con otras fuentes de información "
                     "tanto gubernamental, como aquella proveniente de organizaciones civiles que " 
