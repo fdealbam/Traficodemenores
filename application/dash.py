@@ -121,7 +121,7 @@ femi15_21 = ff[[
  'Enero20','Febrero20','Marzo20','Abril20','Mayo20','Junio20','Julio20',
  'Agosto20','Septiembre20','Octubre20','Noviembre20','Diciembre20',
     
- 'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21',#'Julio21',
+ 'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
 # 'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21'
              ]]
 
@@ -148,7 +148,7 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
                                'Noviembre20', 'Diciembre20',]].sum(axis=1)
 
 femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21', 'Mayo21',
-                                   'Junio21',#'Julio21','Agosto21','Septiembre21','Octubre21',
+                                   'Junio21','Julio21',#'Agosto21','Septiembre21','Octubre21',
                                    #'Noviembre21','Diciembre21'
                                   ]].sum(axis=1)
 
@@ -183,7 +183,7 @@ pagra = ff[[
  'Enero20', 'Febrero20', 'Marzo20', 'Abril20', 'Mayo20', 'Junio20', 'Julio20', 'Agosto20',
     'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20',
 
- 'Enero21', 'Febrero21', 'Marzo21','Abril21', 'Mayo21', 'Junio21',# 'Julio21', 'Agosto21',
+ 'Enero21', 'Febrero21', 'Marzo21','Abril21', 'Mayo21', 'Junio21', 'Julio21',# 'Agosto21',
   #  'Septiembre21','Octubre21','Noviembre21','Diciembre21'
             ]]
 
@@ -535,7 +535,7 @@ body = html.Div([
                        dbc.Badge("mensuales", color="info", className="mr-1")]), 
                                        width={'size': 11,  "offset":1 })]),
        dbc.Row([        
-               dbc.Col(html.H5("(hasta junio 2021)"),
+               dbc.Col(html.H5("(hasta julio 2021)"),
                                        width={ 'size': 3, "offset":1 }),
 
             ]),
@@ -608,21 +608,7 @@ body = html.Div([
     html.Br(),
     
                 dbc.Row([
-          dbc.Col(dbc.Button(([html.P("San Luís Potosí", style={"font-size": 30,"color": "black","background-color": "white"}),
-                       dbc.CardImg(src="https://github.com/fdealbam/Traficodemenores/blob/main/application/static/slp.jpeg?raw=true"),
-    
-                       html.P(
-                           "Los 10 municipios con más tráfico de menores fueron: San Luis Potosí (8), Ciudad Valles (2),"
-                           " Soledad de Graciano Sánchez (1), Rioverde (1), Ciudad Fernández (1), Vanegas (1), "
-                           "Ciudad del Maíz (1), Xilitla (1), Tamazunchale (1) y Alaquines (1).",
-                           style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
-               ]), style={"background-color":"white",
-                         "box-shadow": "10px 20px 30px black",
-                         'margin-left': '300px',
-                        'width': '550px',
-                         
-                         }, disabled=True)),
-                       
+                                
                dbc.Col(dbc.Button(([html.P("Baja California", style={"font-size": 30,"color": "black","background-color": "white"}),
                        dbc.CardImg(src="https://github.com/fdealbam/Traficodemenores/blob/main/application/static/bc.jpeg?raw=true"),
                      html.Br(),
@@ -635,10 +621,26 @@ body = html.Div([
                            style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                        # 'margin-left': '10px',
+                         'margin-left': '300px',
                         'width': '550px',
                         
                          }, disabled=True)),
+                    
+          dbc.Col(dbc.Button(([html.P("San Luís Potosí", style={"font-size": 30,"color": "black","background-color": "white"}),
+                       dbc.CardImg(src="https://github.com/fdealbam/Traficodemenores/blob/main/application/static/slp.jpeg?raw=true"),
+    
+                       html.P(
+                           "Los 10 municipios con más tráfico de menores fueron: San Luis Potosí (8), Ciudad Valles (2),"
+                           " Soledad de Graciano Sánchez (1), Rioverde (1), Ciudad Fernández (1), Vanegas (1), "
+                           "Ciudad del Maíz (1), Xilitla (1), Tamazunchale (1) y Alaquines (1).",
+                           style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                      #   'margin-left': '300px',
+                        'width': '550px',
+                         
+                         }, disabled=True)),
+           
                      html.Br(),
           ]),
   
@@ -781,8 +783,8 @@ app.layout = html.Div([body],
                                     "background-color": "lightgray"}
                                     )
 
-from application.dash import app
-from settings import config
+#from application.dash import app
+#from settings import config
 
 if __name__ == "__main__":
     app.run_server()
