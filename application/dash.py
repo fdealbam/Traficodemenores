@@ -17,7 +17,7 @@ import sidetable as stb
 import datetime
 from datetime import datetime, timedelta
 from datetime import date
-import geopandas as gpd
+#import geopandas as gpd
 import flask
 import os
 
@@ -129,7 +129,7 @@ femi15_21 = fg[[
  'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
  'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21',
     
- 'Enero22',# 'Febrero22', 'Marzo22','Abril22', 'Mayo22', 'Junio22', 'Julio22', 'Agosto22',
+ 'Enero22', 'Febrero22', 'Marzo22','Abril22', 'Mayo22', 'Junio22',# 'Julio22', 'Agosto22',
    #'Septiembre22','Octubre22','Noviembre22','Diciembre22'
              ]]
 
@@ -157,8 +157,8 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
 femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21', 'Mayo21',
                                    'Junio21','Julio21','Agosto21','Septiembre21','Octubre21',
                                    'Noviembre21','Diciembre21']].sum(axis=1)
-femi15_21['Total2022']= femi15_21[[ 'Enero22', #'Febrero22', 'Marzo22', 'Abril22', 'Mayo22',
-                              # 'Junio22', 'Julio22', 'Agosto22', 'Septiembre22', 'Octubre22',
+femi15_21['Total2022']= femi15_21[[ 'Enero22', 'Febrero22', 'Marzo22', 'Abril22', 'Mayo22',
+                               'Junio22',# 'Julio22', 'Agosto22', 'Septiembre22', 'Octubre22',
                                #'Noviembre22', 'Diciembre22',
                                   ]].sum(axis=1)
 
@@ -196,7 +196,7 @@ pagra = fg[[
  'Enero21', 'Febrero21', 'Marzo21','Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
     'Septiembre21','Octubre21','Noviembre21','Diciembre21',
     
- 'Enero22',# 'Febrero22', 'Marzo22','Abril22', 'Mayo22', 'Junio22', 'Julio22', 'Agosto22',
+ 'Enero22', 'Febrero22', 'Marzo22','Abril22', 'Mayo22', 'Junio22', #'Julio22', 'Agosto22',
    #'Septiembre22','Octubre22','Noviembre22','Diciembre22'
             ]]
 
@@ -442,9 +442,9 @@ n4edo4 = delPue2.iloc[3]['Municipio']
 n5edo4 = delPue2.iloc[4]['Municipio']
 n6edo4 = delPue2.iloc[5]['Municipio']
 n7edo4 = delPue2.iloc[6]['Municipio']
-n8edo4 = delPue2.iloc[7]['Municipio']
-n9edo4 = delPue2.iloc[8]['Municipio']
-n10edo4 = delPue2.iloc[9]['Municipio']
+#n8edo4 = delPue2.iloc[7]['Municipio']
+#n9edo4 = delPue2.iloc[8]['Municipio']
+#n10edo4 = delPue2.iloc[9]['Municipio']
 v1edo4 = int(delPue2.iloc[0]['Grand total'])
 v2edo4 = int(delPue2.iloc[1]['Grand total'])
 v3edo4 = int(delPue2.iloc[2]['Grand total'])
@@ -452,9 +452,9 @@ v4edo4 = int(delPue2.iloc[3]['Grand total'])
 v5edo4 = int(delPue2.iloc[4]['Grand total'])
 v6edo4 = int(delPue2.iloc[5]['Grand total'])
 v7edo4 = int(delPue2.iloc[6]['Grand total'])
-v8edo4 = int(delPue2.iloc[7]['Grand total'])
-v9edo4 = int(delPue2.iloc[8]['Grand total'])
-v10edo4 =int( delPue2.iloc[9]['Grand total'])
+#v8edo4 = int(delPue2.iloc[7]['Grand total'])
+#v9edo4 = int(delPue2.iloc[8]['Grand total'])
+#v10edo4 =int( delPue2.iloc[9]['Grand total'])
 
 bulletedo1 = ("Los 10 municipios con más tráfico de menores fueron: "+str(n1edo1)  +" ("+ str(v1edo1)+"), "+str(n2edo1) +" ("+ str(v2edo1)+"), "+str(n3edo1) +" ("+ str(v3edo1)+"), "+str(n4edo1) +" ("+ str(v4edo1)+"), "+str(n5edo1) +" ("+ str(v5edo1)+"), "+str(n6edo1) +" ("+ str(v6edo1)+"), "+str(n7edo1) +" ("+ str(v7edo1)+"), "+str(n8edo1) +" ("+ str(v8edo1)+"), "+str(n9edo1) +" ("+ str(v9edo1) +") y "+str(n10edo1)+" ("+ str(v10edo1)+").")
 bulletedo2 = ("Los 10 municipios con más tráfico de menores fueron: "+str(n1edo2) +" ("+ str(v1edo2)+"), "+str(n2edo2) +" ("+ str(v2edo2)+"), "+str(n3edo2) +" ("+ str(v3edo2)+"), "+str(n4edo2) +" ("+ str(v4edo2)+"), "+str(n5edo2) +" ("+ str(v5edo2)+"), "+str(n6edo2) +" ("+ str(v6edo2)+"), "+str(n7edo2) +" ("+ str(v7edo2)+"), "+str(n8edo2) +" ("+ str(v8edo2)+"), "+str(n9edo2) +" ("+ str(v9edo2)+") y "+str(n10edo2) +" ("+ str(v10edo2)+").")
@@ -679,7 +679,7 @@ body = html.Div([
                        dbc.Badge("mensuales", color="info", className="mr-1")]), 
                                        width={'size': 11,  "offset":1 })]),
        dbc.Row([        
-               dbc.Col(html.H5("(hasta enero 2022)"),
+               dbc.Col(html.H5("(hasta junio 2022)"),
                                        width={ 'size': 3, "offset":1 }),
 
             ]),
